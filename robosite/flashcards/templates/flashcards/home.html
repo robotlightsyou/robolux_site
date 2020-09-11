@@ -6,7 +6,18 @@
     </div>
     <div class='container'>
         {% for word in test %}
-            <h1>{{ word.term }}: </h1><p>{{ word.def }}</p>
+            {% comment %} <h1>{{ word.term }}: </h1><p>{{ word.def }}</p> {% endcomment %}
+            
+            <article class="media content-section">
+                <div class="media-body">
+                    {% comment %} <div class="article-metadata">
+                        <a class="mr-2" href="#"></a>
+                        <small class="text-muted"></small>
+                    </div>  {% endcomment %}
+                    <h2><a class="article-title" href="#">{{ word.term }}:</a></h2>
+                    <p class="article-content">{{ word.def }}</p>
+                </div>
+            </article>
         {% endfor %}
     </div>
 {% endblock content %}
