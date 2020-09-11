@@ -27,7 +27,8 @@ test2 = [
 # Create your views here.
 def home(request):
     context = {
-        'test': test2
+        'test': test2,
+        'title': 'Flashcards'
     }
     return render(request, 'flashcards/home.html', context)
 
