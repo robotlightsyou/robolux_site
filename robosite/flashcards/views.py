@@ -3,9 +3,6 @@ from django.http import HttpResponse
 from flashcards.models import Term
 
 
-# Create your views here.
-
-
 def home(request):
     context = {
         'terms': Term.objects.all(),
