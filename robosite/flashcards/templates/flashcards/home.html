@@ -1,3 +1,18 @@
+{% extends 'landing/base.html' %}
+{% block content %}
+    <div class='container'>
+        <h1>Welcome to Technical Theatre Flashcards</h1>
+        <p>This app is a simple flashcard game to test your knowledge of comman terms in technical theatre. Enjoy!</p>
+    </div>
+    <div class='container'>
+        {% for word in test %}
+            <h1>{{ word.term }}: </h1><p>{{ word.def }}</p>
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+{% comment %} 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,4 +36,4 @@
     </div>
     
 </body>
-</html>
+</html> {% endcomment %}
