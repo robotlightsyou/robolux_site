@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path
 from flashcards import views
 
+# fix paths nb flashcards home
 urlpatterns = [
     path('', views.home, name='flashcards-home'),
     path('about/', views.about, name='flashcards-about'),
